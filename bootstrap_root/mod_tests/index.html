@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+ 	<link rel="stylesheet/less" type="text/css" href="../less/bootstrap.less" />
+ 	<link rel="stylesheet/less" type="text/css" href="../less/responsive.less" />
+ 	<script type="text/javascript" src="js/less.js"></script>
+ 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+ 	<script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+	<div class="container mod-highlight-container">
+		<h2>Fixed girds <small> Responsive with change in browser size. max-width:1200px</small></h2>
+		<div class="row-fluid mod-highlight">
+			<div class="alert alert-info">
+				<strong>col-width:</strong>&nbsp;90px <br> 
+				<strong>col-gutter:</strong>&nbsp;5px
+			</div>
+		</div>
+		<div class="row-fluid mod-highlight">
+			<div class="span1">1</div>
+			<div class="span1">1</div>
+			<div class="span1">1</div>
+			<div class="span1">1</div>
+			<div class="span1">1</div>
+			<div class="span1">1</div>
+			<div class="span1">1</div>
+			<div class="span1">1</div>
+			<div class="span1">1</div>
+			<div class="span1">1</div>
+			<div class="span1">1</div>
+			<div class="span1">1</div>
+		</div>
+		<div class="row-fluid mod-highlight">
+			<div class="span11">11</div>
+			<div class="span1">1</div>
+		</div>
+		<div class="row-fluid mod-highlight">
+			<div class="span11">
+				<div class="row-fluid mod-highlight light">
+					<div class="span1">1</div>
+					<div class="span1">1</div>
+					<div class="span1">1</div>
+					<div class="span1">1</div>
+					<div class="span1">1</div>
+					<div class="span1">1</div>
+					<div class="span1">1</div>
+					<div class="span1">1</div>
+					<div class="span1">1</div>
+					<div class="span1">1</div>
+					<div class="span1">1</div>
+					<div class="span1">1</div>
+				</div>
+			</div>
+			<div class="span1">1</div>
+		</div>
+	</div>
+	<div class="container-fluid mod-highlight-container">
+		<h2>Fluid girds <small> Responsive with change in browser size. max-width:100%</small></h2>
+		<div class="row-fluid mod-highlight">
+			<div class="alert alert-info">
+				<strong>col-width:</strong>&nbsp;90px  converted to 7.563025210084033%<br> 
+				<strong>col-gutter:</strong>&nbsp;5px  converted to 0.8403361344537815%
+			</div>
+		</div>
+		<div class="row-fluid mod-highlight">
+			<div class="span1">1</div>
+			<div class="span1">1</div>
+			<div class="span1">1</div>
+			<div class="span1">1</div>
+			<div class="span1">1</div>
+			<div class="span1">1</div>
+			<div class="span1">1</div>
+			<div class="span1">1</div>
+			<div class="span1">1</div>
+			<div class="span1">1</div>
+			<div class="span1">1</div>
+			<div class="span1">1</div>
+		</div>
+	</div>
+	<!-- The POC for the collapsable filter bar -->
+	<div class="container mod-highlight-container">
+		<div class="row-fluid text-center" style="display:none" >
+			<button id="show-collapse" class="btn btn-primary btn-block">SHOW COLLAPSED</button>
+		</div>
+		<div id="catalog-container" class="row-fluid mod-highlight">
+			<!-- The collapsable sidebar -->
+			<div class="span3">
+				<button id="hide-collapse" class="btn btn-primary btn-block">HIDE ME</button>
+			</div>
+			<!-- The products catalog -->
+			<div class="span9">
+				<div class="row-fluid">
+					<div class="span4 alpha">
+						<img alt="image1" src="http://lorempixel.com/200/200/people/1">
+						<strong>Product Name</strong><br>
+						<small>10 Reviews</small>
+					</div>
+					<div class="span4">
+						<img alt="image1" src="http://lorempixel.com/200/200/people/2">
+						<strong>Product Name</strong><br>
+						<small>10 Reviews</small>
+						
+					</div>
+					<div class="span4">
+						<img alt="image1" src="http://lorempixel.com/200/200/people/3">
+						<strong>Product Name</strong><br>
+						<small>10 Reviews</small>
+					</div>
+					<div class="span4 alpha">
+						<img alt="image1" src="http://lorempixel.com/200/200/people/4">
+						<strong>Product Name</strong><br>
+						<small>10 Reviews</small>
+					</div>
+					<div class="span4">
+						<img alt="image1" src="http://lorempixel.com/200/200/people/5">
+						<strong>Product Name</strong><br>
+						<small>10 Reviews</small>
+					</div>
+					<div class="span4">
+						<img alt="image1" src="http://lorempixel.com/200/200/people/6">
+						<strong>Product Name</strong><br>
+						<small>10 Reviews</small>
+					</div>
+					<div class="span4 alpha">
+						<img alt="image1" src="http://lorempixel.com/200/200/people/7">
+						<strong>Product Name</strong><br>
+						<small>10 Reviews</small>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

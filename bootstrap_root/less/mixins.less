@@ -576,6 +576,7 @@
 
     .spanX (@index) when (@index > 0) {
       .span@{index} { .span(@index); }
+      .span@{index}:first-child { .span(@index); margin-left:0px;}
       .spanX(@index - 1);
     }
     .spanX (0) {}
@@ -590,12 +591,18 @@
       margin-left: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns + 1));
     }
 
-    .span (@columns) {
-      width: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1));
+    .span (@columns;@extraGutter: 0px) {
+      width: (@gridColumnWidth * @columns) + (@gridGutterWidth* (@columns - 1));
+      .mod-margin(@extraGutter);
     }
+    
+      .mod-margin(@extraGutter)  when (@extraGutter > 0 ){
+      	padding-left: @extraGutter;
+      	padding-right: @extraGutter;
+      }
 
     .row {
-      margin-left: @gridGutterWidth * -1;
+      // margin-left: @gridGutterWidth * -1;
       .clearfix();
     }
 
@@ -609,7 +616,7 @@
     .container,
     .navbar-static-top .container,
     .navbar-fixed-top .container,
-    .navbar-fixed-bottom .container { .span(@gridColumns); }
+    .navbar-fixed-bottom .container { .span(@gridColumns;5px); }
 
     // generate .spanX and .offsetX
     .spanX (@gridColumns);
@@ -644,7 +651,7 @@
 
     .span (@columns) {
       width: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1));
-      *width: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) - (.5 / @gridRowWidth * 100 * 1%);
+     *width: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) - (.5 / @gridRowWidth * 100 * 1%);
     }
 
     .row-fluid {
